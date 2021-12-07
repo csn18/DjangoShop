@@ -4,8 +4,6 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.routers import DefaultRouter
 
-from Shop.api import *
-
 router = DefaultRouter()
 router.register(r'products', AllProductViewSet)
 router.register(r'products/<int:pk>/', DetailProductViewSet)

@@ -1,5 +1,5 @@
 from django.urls import path
-from Shop.views import *
+from Backend.Shop.views import *
 
 
 

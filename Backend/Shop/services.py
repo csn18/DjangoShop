@@ -1,6 +1,3 @@
-from Shop.models import *
-
-
 def add_product(request, pk):
     add_item = Product.objects.get(id=pk)
     customer = Customer.objects.get(id=request.user.id)

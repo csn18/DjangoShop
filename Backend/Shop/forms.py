@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from Shop.models import ProductColor
+from Backend.Shop.models import ProductColor
 
 
 class ProductColorForm(ModelForm):
