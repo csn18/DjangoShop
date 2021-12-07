@@ -3,30 +3,19 @@ from .models import ProductPhoto, Product
 
 
 class ProductPhotoSerializer(serializers.ModelSerializer):
+    """
+    Serializer for product photo
+    """
+
     class Meta:
         model = ProductPhoto
         fields = ['image_url']
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    name = serializers.CharField(required=True)
-    color = serializers.SlugRelatedField(read_only=True, slug_field='name_color')
-    size = serializers.SlugRelatedField(read_only=True, slug_field='size')
-    image = ProductPhotoSerializer()
-
-    class Meta:
-        model = Product
-        fields = [
-            'name',
-            'color',
-            'size',
-            'count',
-            'price',
-            'image'
-        ]
-
-
-class ProductDetailSerializer(serializers.ModelSerializer):
+    """
+    Serializer for product
+    """
     name = serializers.CharField(required=True)
     color = serializers.SlugRelatedField(read_only=True, slug_field='name_color')
     size = serializers.SlugRelatedField(read_only=True, slug_field='size')

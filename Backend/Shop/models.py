@@ -3,6 +3,9 @@ from django.db import models
 
 
 class ProductColor(models.Model):
+    """
+    Color for product item
+    """
     name_color = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 
@@ -11,6 +14,9 @@ class ProductColor(models.Model):
 
 
 class ProductSize(models.Model):
+    """
+    Size for product item
+    """
     size = models.DecimalField(max_digits=3, decimal_places=1)
 
     def __str__(self):
@@ -18,6 +24,9 @@ class ProductSize(models.Model):
 
 
 class GenderType(models.Model):
+    """
+    Gender for product item
+    """
     gender = models.CharField(max_length=255)
 
     def __str__(self):
@@ -25,6 +34,9 @@ class GenderType(models.Model):
 
 
 class Manufacturer(models.Model):
+    """
+    Manufacturer for product item
+    """
     manufacturer_name = models.CharField(max_length=255)
 
     def __str__(self):
@@ -32,6 +44,9 @@ class Manufacturer(models.Model):
 
 
 class ProductType(models.Model):
+    """
+    Type for product item
+    """
     type = models.CharField(max_length=255)
 
     def __str__(self):
@@ -39,10 +54,16 @@ class ProductType(models.Model):
 
 
 class ProductPhoto(models.Model):
+    """
+    Photo for product item
+    """
     image_url = models.ImageField(upload_to='product/image')
 
 
 class Product(models.Model):
+    """
+    Product item
+    """
     name = models.CharField(max_length=255)
     color = models.ForeignKey(ProductColor, on_delete=models.CASCADE, null=True)
     size = models.ForeignKey(ProductSize, on_delete=models.CASCADE, null=True)
@@ -59,6 +80,9 @@ class Product(models.Model):
 
 
 class Customer(models.Model):
+    """
+    Customer
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -66,6 +90,9 @@ class Customer(models.Model):
 
 
 class ProductCart(models.Model):
+    """
+    Product cart for everyone user
+    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
