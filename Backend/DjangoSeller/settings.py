@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'rest_framework_json_api',
-    'rest_framework_simplejwt'
+    'rest_framework_simplejwt',
+    'rest_framework_swagger'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'staticfiles': 'django.templatetags.static',
+            },
         },
     },
 ]
@@ -92,6 +96,8 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework_json_api.pagination.PageNumberPagination',
+
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
 }
