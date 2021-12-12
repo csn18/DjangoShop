@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e3bca71-2abb-4c00-88f4-28fbf38b51e5" name="Changes" comment="Change directory">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DjangoSeller/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DjangoSeller/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DjangoSeller/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DjangoSeller/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="7e3bca71-2abb-4c00-88f4-28fbf38b51e5" name="Changes" comment="Added Swagger for get API list" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638870492689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Swagger for get API list">
+      <created>1639318853702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639318853702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change directory" />
+    <MESSAGE value="Added Swagger for get API list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Swagger for get API list" />
   </component>
 </project>
