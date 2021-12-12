@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e3bca71-2abb-4c00-88f4-28fbf38b51e5" name="Changes" comment="Change directory">
-      <change afterPath="$PROJECT_DIR$/Backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Shop/migrations/0005_alter_product_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-shop/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-shop/entrypoint.sh" afterDir="false" />
+    <list default="true" id="7e3bca71-2abb-4c00-88f4-28fbf38b51e5" name="Changes" comment="Added Docker for ReactJS and Django RestFramework">
+      <change afterPath="$PROJECT_DIR$/Backend/Accounts/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Shop/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/DjangoSeller/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DjangoSeller/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/DjangoSeller/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DjangoSeller/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Shop/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Shop/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Shop/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Shop/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/templates/CartPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/templates/ShopPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +119,10 @@
       <updated>1638869939480</updated>
       <workItem from="1638869940689" duration="895000" />
       <workItem from="1638870845989" duration="2294000" />
-      <workItem from="1638893881352" duration="6061000" />
+      <workItem from="1638893881352" duration="7363000" />
+      <workItem from="1638947329770" duration="24000" />
+      <workItem from="1639158827114" duration="813000" />
+      <workItem from="1639307158189" duration="9345000" />
     </task>
     <task id="LOCAL-00001" summary="Change directory">
       <created>1638870492689</created>
@@ -140,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638870492689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Docker for ReactJS and Django RestFramework">
+      <created>1638901873885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638901873885</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change directory" />
+    <MESSAGE value="Added Docker for ReactJS and Django RestFramework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Docker for ReactJS and Django RestFramework" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import datetime
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -17,7 +18,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Shop.apps.ShopConfig',
-    'rest_framework'
+
+    'Accounts.apps.AccountsConfig',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
+    'rest_framework_json_api',
+    'rest_framework_simplejwt'
 ]
 
 MIDDLEWARE = [
@@ -72,6 +80,39 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework_json_api.pagination.PageNumberPagination',
+
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+}
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=2),
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7)
+}
+
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ['JWT']
+}
+
+DJOSER = {
+    'SEND_ACTIVATION_EMAIL': True,
+    'ACTIVATION_URL': 'auth/activate/{uid}/{token}/',
+    'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
+    'PASSWORD_RESET_CONFIRM_URL': 'auth/reset/confirm/{uid}/{token}/',
+    'TOKEN_MODEL': None
+}
 
 LANGUAGE_CODE = 'ru-RU'
 

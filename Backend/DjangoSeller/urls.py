@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from Shop.api import *
+from Accounts.router import urlpatterns as url_accounts
+from Shop.router import urlpatterns as url_shop
 
-router = DefaultRouter()
-router.register(r'products', AllProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
 ]
+
+urlpatterns += url_accounts
+urlpatterns += url_shop
