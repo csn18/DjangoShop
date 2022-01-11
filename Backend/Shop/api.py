@@ -10,3 +10,12 @@ class AllProductViewSet(ModelViewSet):
     """
     queryset = get_all_products()
     serializer_class = ProductSerializer
+
+
+class CartViewSet(ModelViewSet):
+    """
+    Product cart api endpoint
+    """
+    queryset = get_product_cart_items()
+    serializer_class = CartSerializer
+

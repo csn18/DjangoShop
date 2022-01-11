@@ -10,7 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(ProductCart)
 class ProductCartAdmin(admin.ModelAdmin):
-    list_display = ['product', 'customer']
+    list_display = ['customer']
 
 
 admin.site.register(ProductColor)
