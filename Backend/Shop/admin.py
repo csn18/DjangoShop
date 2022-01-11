@@ -4,8 +4,8 @@ from .models import *
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'price', 'color', 'description', 'count']
-    list_editable = ['price', 'color', 'description', 'count']
+    list_display = ['name', 'price', 'color', 'count']
+    list_editable = ['price', 'color', 'count']
 
 
 @admin.register(ProductCart)

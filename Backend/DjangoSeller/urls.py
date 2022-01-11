@@ -1,5 +1,7 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from rest_framework_swagger.views import get_swagger_view
 
 from Accounts.router import urlpatterns as url_accounts
@@ -14,3 +16,4 @@ urlpatterns = [
 
 urlpatterns += url_accounts
 urlpatterns += url_shop
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

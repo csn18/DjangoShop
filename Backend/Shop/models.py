@@ -66,12 +66,12 @@ class Product(models.Model):
     """
     name = models.CharField(max_length=255)
     color = models.ForeignKey(ProductColor, on_delete=models.CASCADE, null=True)
-    size = models.ForeignKey(ProductSize, on_delete=models.CASCADE, null=True)
+    size = models.ManyToManyField(ProductSize)
     gender = models.ForeignKey(GenderType, on_delete=models.CASCADE, null=True)
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, null=True)
     type = models.ForeignKey(ProductType, on_delete=models.CASCADE, null=True)
     count = models.IntegerField(default=10)
-    description = models.CharField(max_length=255)
+    description = models.TextField(max_length=4096)
     price = models.IntegerField()
     image = models.ForeignKey(ProductPhoto, on_delete=models.CASCADE, null=True, blank=True)
 

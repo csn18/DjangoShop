@@ -18,7 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
     """
     name = serializers.CharField(required=True)
     color = serializers.SlugRelatedField(read_only=True, slug_field='name_color')
-    size = serializers.SlugRelatedField(read_only=True, slug_field='size')
+    size = serializers.SlugRelatedField(read_only=True, many=True, slug_field='size')
     gender = serializers.SlugRelatedField(read_only=True, slug_field='gender')
     manufacturer = serializers.SlugRelatedField(read_only=True, slug_field='manufacturer_name')
     type = serializers.SlugRelatedField(read_only=True, slug_field='type')
