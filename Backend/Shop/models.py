@@ -93,7 +93,7 @@ class ProductCart(models.Model):
     """
     Product cart for everyone user
     """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ManyToManyField(Product)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def __str__(self):

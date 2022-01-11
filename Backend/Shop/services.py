@@ -18,6 +18,13 @@ def get_all_products():
     return Product.objects.all()
 
 
+def get_product_cart_items():
+    """
+    Get product form product cart
+    """
+    return ProductCart.objects.all()
+
+
 def get_customer_product_cart(customer_id):
     """
     Get customer from database
