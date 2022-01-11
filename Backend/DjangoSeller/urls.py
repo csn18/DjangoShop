@@ -11,7 +11,7 @@ api_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('all-api/', api_view)
+    path('/', api_view)
 ]
 
 urlpatterns += url_accounts
