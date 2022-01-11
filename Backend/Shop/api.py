@@ -1,4 +1,5 @@
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet, ViewSet
 
 from .serializers import *
 from .services import *
@@ -12,10 +13,12 @@ class AllProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
 
 
-class CartViewSet(ModelViewSet):
+class CartViewSet(ViewSet):
     """
     Product cart api endpoint
     """
-    queryset = get_product_cart_items()
-    serializer_class = CartSerializer
 
+    def list(self, request):
+        queryset = get_product_cart_items(request)
+        serializer = CartSerializer(queryset)
+        return Response(serializer.data)

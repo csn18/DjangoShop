@@ -79,22 +79,12 @@ class Product(models.Model):
         return self.name
 
 
-class Customer(models.Model):
-    """
-    Customer
-    """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f'{self.user}'
-
-
 class ProductCart(models.Model):
     """
     Product cart for everyone user
     """
     product = models.ManyToManyField(Product)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.product}'

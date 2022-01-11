@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ProductPhoto, Product, ProductCart, Customer
+from .models import ProductPhoto, Product, ProductCart
 
 
 class ProductPhotoSerializer(serializers.ModelSerializer):
@@ -41,22 +41,11 @@ class ProductSerializer(serializers.ModelSerializer):
         ]
 
 
-class CustomerSerializer(serializers.ModelSerializer):
-    """
-    Serializer for customer
-    """
-    user = serializers.SlugRelatedField(read_only=True, slug_field='username')
-
-    class Meta:
-        model = Customer
-        fields = '__all__'
-
-
 class CartSerializer(serializers.ModelSerializer):
     """
     Serializer for get product cart
     """
-    customer = CustomerSerializer(read_only=True)
+    customer = serializers.SlugRelatedField(read_only=True, slug_field='username')
 
     class Meta:
         model = ProductCart

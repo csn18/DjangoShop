@@ -5,7 +5,7 @@ from Shop.api import *
 
 router = DefaultRouter()
 router.register(r'products', AllProductViewSet)
-router.register(r'cart', CartViewSet)
+router.register(r'cart', CartViewSet, basename='cart')
 
 urlpatterns = [
     path('api/', include(router.urls)),

@@ -1,4 +1,5 @@
 from .models import *
+from rest_framework.authtoken.models import Token
 
 
 def add_product(request, pk):
@@ -18,16 +19,10 @@ def get_all_products():
     return Product.objects.all()
 
 
-def get_product_cart_items():
+def get_product_cart_items(request):
     """
     Get product form product cart
     """
-    return ProductCart.objects.all()
-
-
-def get_customer_product_cart(customer_id):
-    """
-    Get customer from database
-    """
-    customer = Customer.objects.get(id=customer_id)
-    return ProductCart.objects.filter(customer=customer)
+    token = Token.objects.get(key=request.headers['Authorization'])
+    product_cart = ProductCart.objects.get(customer=token.user)
+    return product_cart
