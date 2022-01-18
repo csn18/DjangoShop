@@ -7,6 +7,6 @@ COPY entrypoint.sh ./
 
 RUN npm install
 
-COPY ./ ./
+COPY . ./
 
 ENTRYPOINT ["sh", "/app/front/entrypoint.sh"]
