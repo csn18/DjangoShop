@@ -1,8 +1,8 @@
-FROM node:14.9
+FROM node:14
 
 WORKDIR /app/front
 
-COPY package*.json ./
+COPY package.json ./
 COPY entrypoint.sh ./
 
 RUN npm install
