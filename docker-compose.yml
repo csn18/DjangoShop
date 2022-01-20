@@ -20,5 +20,21 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./Backend:/app/back
+      - static_volume:/app/back/static
     ports:
       - "8000:8000"
+
+  nginx:
+    build:
+      context: ./Backend/nginx
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/back/static
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  static_volume:
+  media_volume:
