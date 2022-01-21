@@ -23,15 +23,19 @@ function App() {
         const [cartResponse, favoritesResponse, itemsResponse] = await Promise.all([
           axios.get('https://60d62397943aa60017768e77.mockapi.io/cart'),
           axios.get('https://60d62397943aa60017768e77.mockapi.io/favorites'),
-          axios.get('https://60d62397943aa60017768e77.mockapi.io/items'),
+          axios.get('http://194.67.104.230:8000/api/products/?format=json'),
+
         ]);
 
         setIsLoading(false);
         setCartItems(cartResponse.data);
         setFavorites(favoritesResponse.data);
+        console.log(itemsResponse);
         setItems(itemsResponse.data);
+        
       } catch (error) {
         alert('Ошибка при запросе данных ;(');
+      
         console.error(error);
       }
     }
